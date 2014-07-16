@@ -1,0 +1,50 @@
+---
+abstract: 'object mce'
+author:
+  - 'Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>'
+build_requires:
+  Test::More: '0'
+  Test::Pod: '0'
+configure_requires:
+  Module::Build::Tiny: '0.036'
+dynamic_config: 0
+generated_by: 'Dist::Milla version v1.0.5, Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.141520'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Runner-Init
+no_index:
+  directory:
+    - t
+    - xt
+    - inc
+    - share
+    - eg
+    - examples
+requires:
+  Carp: '0'
+  Cwd: '0'
+  Data::Dumper: '0'
+  DateTime: '0'
+  DateTime::Format::Duration: '0'
+  File::Path: '0'
+  File::Temp: '0'
+  IO::File: '0'
+  IO::Select: '0'
+  IPC::Open3: '0'
+  Log::Log4perl: '0'
+  Moose: '0'
+  Moose::Util::TypeConstraints: '0'
+  MooseX::Getopt: '0'
+  MooseX::SimpleConfig: '0'
+  Symbol: '0'
+  Template: '0'
+  perl: '5.006'
+resources:
+  bugtracker: https://github.com/jerowe/Runner-Init/issues
+  homepage: https://github.com/jerowe/Runner-Init
+  repository: https://github.com/jerowe/Runner-Init.git
+version: '1.0'
+x_contributors:
+  - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'

@@ -1,0 +1,15 @@
+perl example/testioselect.pl 1
+perl example/testioselect.pl 2
+perl example/testioselect.pl 3
+perl example/testioselect.pl 4
+wait
+perl example/testioselect.pl 5
+perl example/testioselect.pl 6
+perl example/testioselect.pl 7
+perl example/testioselect.pl 8
+perl example/testioselect.pl 9
+perl example/testioselect.pl 10
+perl example/testioselect.pl 11
+wait
+perl example/testioselect.pl 12
+perl example/testioselect.pl 13

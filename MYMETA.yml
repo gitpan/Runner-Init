@@ -1,0 +1,40 @@
+---
+abstract: unknown
+author:
+  - 'Jillian Rowe <jillian.e.rowe@gmail.com>'
+build_requires:
+  Test::More: '0'
+  Test::Pod: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520'
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Runner-Init
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  Carp: '0'
+  Cwd: '0'
+  Data::Dumper: '0'
+  DateTime: '0'
+  DateTime::Format::Duration: '0'
+  File::Path: '0'
+  File::Temp: '0'
+  IO::File: '0'
+  IO::Select: '0'
+  IPC::Open3: '0'
+  Log::Log4perl: '0'
+  Moose: '0'
+  Moose::Util::TypeConstraints: '0'
+  MooseX::Getopt: '0'
+  MooseX::SimpleConfig: '0'
+  Symbol: '0'
+  Template: '0'
+  perl: '5.006'
+version: '1.0'
