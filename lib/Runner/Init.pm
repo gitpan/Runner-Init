@@ -28,7 +28,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.0';
+our $VERSION = '1.1';
 
 =head1 SYNOPSIS
 
@@ -204,7 +204,7 @@ sub init_log{
             utf8     => 1,
             mode => 'append',
             file => ">>".$self->logdir."/".$self->logfile,
-            layout   => '%d-%M: %p %m%n '
+            layout   => '%d: %p %m%n '
         }
     );
 

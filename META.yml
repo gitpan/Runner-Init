@@ -3,12 +3,13 @@ abstract: 'object mce'
 author:
   - 'Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>'
 build_requires:
+  Module::Build: '0.28'
   Test::More: '0'
   Test::Pod: '0'
 configure_requires:
-  Module::Build::Tiny: '0.036'
+  Module::Build: '0.28'
 dynamic_config: 0
-generated_by: 'Dist::Milla version v1.0.5, Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.141520'
+generated_by: 'Dist::Milla version v1.0.5, Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.141520'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -45,6 +46,6 @@ resources:
   bugtracker: https://github.com/jerowe/Runner-Init/issues
   homepage: https://github.com/jerowe/Runner-Init
   repository: https://github.com/jerowe/Runner-Init.git
-version: '1.0'
+version: '1.1'
 x_contributors:
   - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'
