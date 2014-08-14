@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.1';
+our $VERSION = '1.2';
 
 
 =head1 SYNOPSIS
@@ -762,10 +762,10 @@ sub process_batch{
     $self->cmdfile($self->jobname."_batch".$self->batch_counter.".in");
 
     if($self->use_threads){
-        $command = "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile;
+        $command = "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir;
     }
     elsif($self->use_processes){
-        $command = "mcerunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile;
+        $command = "mcerunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir;
     }
 
     $self->template->process($self->template_file, 

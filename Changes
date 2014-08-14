@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+1.2  2014-08-14 11:26:42 AST
+    - Outdirectories for prunner/mce should be in the outdir
+
 1.1  2014-08-06 14:33:55 AST
      - Moving over to Module::Build
 

@@ -6,6 +6,7 @@
 #        USAGE:  ./slurmrunner.pl  
 #
 #  DESCRIPTION: Run jobs using slurm job queing system 
+#               slurmrunner.pl --infile `pwd`/example/testcommand.in --outdir `pwd`/example/outslurm --jobname test
 #
 #===============================================================================
 
