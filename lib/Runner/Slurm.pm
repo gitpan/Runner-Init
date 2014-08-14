@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.2';
+our $VERSION = '1.3';
 
 
 =head1 SYNOPSIS
@@ -655,7 +655,7 @@ sub parse_file_slurm{
         next unless $line =~ m/\S/;
         next if $line =~ m/^#/;
 
-        if( 0 == $self->cmd_counter % $self->commands_per_node && $self->batch ){
+        if( 0 == $self->cmd_counter % ($self->commands_per_node + 1) && $self->batch ){
             #Run this batch and start the next
             $self->work;
         }
