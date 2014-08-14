@@ -12,6 +12,7 @@ use DateTime;
 use DateTime::Format::Duration;
 use Cwd;
 use File::Path qw(make_path);
+use File::Spec;
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -28,7 +29,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.3';
+our $VERSION = '1.4';
 
 =head1 SYNOPSIS
 
@@ -52,8 +53,16 @@ has 'infile' => (
     is => 'rw',
     isa => 'Str',
     required => 1,
-    documentation => q{File of commands separated by newline. The command 'wait' indicates all previous commands should finish before starting the next one.}
+    documentation => q{File of commands separated by newline. The command 'wait' indicates all previous commands should finish before starting the next one.},
+    trigger => \&_set_infile,
 );
+
+sub _set_infile{
+    my($self, $infile) = @_;
+
+    $infile = File::Spec->rel2abs($infile);
+    $self->{infile} = $infile;
+}
 
 =head2 outdir
 
@@ -66,8 +75,17 @@ has 'outdir' => (
     isa => 'Str',
     required => 1,
     default => sub {return getcwd() },
-    documentation => q{Directory to write out files.}
+    documentation => q{Directory to write out files.},
+    trigger => \&_set_outdir,
 );
+
+sub _set_outdir{
+    my($self, $outdir) = @_;
+
+    make_path($outdir) if ! -d $outdir;
+    $outdir = File::Spec->rel2abs($outdir);
+    $self->{outdir} = $outdir;
+}
 
 =head2 logdir
 

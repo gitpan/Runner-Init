@@ -15,7 +15,6 @@ bin/slurmrunner.pl
 cpanfile
 dist.ini
 example/test_chunker.yml
-example/test_slurm.in
 example/test_threads.in
 example/testcommand.in
 example/testioselect.pl

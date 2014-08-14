@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+1.4  2014-08-14 13:47:03 AST
+    - Cleaned up paths some, using File::Spec to get complete path directories
+
 1.3  2014-08-14 12:57:42 AST
     - Made change to commands per node, was subtracting one now it is ok
 

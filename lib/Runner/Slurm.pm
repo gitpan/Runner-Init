@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.3';
+our $VERSION = '1.4';
 
 
 =head1 SYNOPSIS
@@ -515,7 +515,7 @@ sub run {
 #    system("module load slurm");
 #    system("module load shared");
     
-    print "In run\n";
+    print "In run devel\n";
     $self->logname('slurm_logs');
     $self->log($self->init_log);
     $self->log->info("hello world");
@@ -759,7 +759,7 @@ sub process_batch{
 
     #Giving outdir/jobname doesn't work unless a full file path is supplied
     #Need to get absolute path going on...
-    $self->cmdfile($self->jobname."_batch".$self->batch_counter.".in");
+#    $self->cmdfile($self->jobname."_batch".$self->batch_counter.".in");
 
     if($self->use_threads){
         $command = "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir;
