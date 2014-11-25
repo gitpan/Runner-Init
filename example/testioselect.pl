@@ -39,11 +39,12 @@ for (1..10){
         $str .= ('A'..'Z','a'..'z',0..9)[rand 62];
     }
     if(int rand 2){ # 50:50 chance
-        print STDOUT "StdOut:$str";
+        print STDOUT "StdOut:$str\n";
     } else {
-        print STDERR "StdErr:$str";
+        print STDERR "StdErr:$str\n";
     }
     sleep 1;
 }
 
+print "\n#####################################\n";
 

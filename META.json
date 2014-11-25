@@ -4,7 +4,7 @@
       "Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Milla version v1.0.5, Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.141520",
+   "generated_by" : "Dist::Zilla version 5.025, Dist::Milla version v1.0.5, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
@@ -76,7 +76,7 @@
          "web" : "https://github.com/jerowe/Runner-Init"
       }
    },
-   "version" : "1.4",
+   "version" : "1.5",
    "x_contributors" : [
       "Jillian Rowe <jir2004@qatar-med.cornell.edu>"
    ]
