@@ -1,0 +1,10 @@
+List::Util version 1.33 required--this is only version 1.25 at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Class/MOP/Class.pm line 17.
+BEGIN failed--compilation aborted at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Class/MOP/Class.pm line 17.
+Compilation failed in require at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Class/MOP.pm line 17.
+BEGIN failed--compilation aborted at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Class/MOP.pm line 17.
+Compilation failed in require at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Moose/Exporter.pm line 7.
+BEGIN failed--compilation aborted at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Moose/Exporter.pm line 7.
+Compilation failed in require at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Moose.pm line 15.
+BEGIN failed--compilation aborted at /data/apps/software/perl/perls/perl-5.16.3/lib/site_perl/5.16.3/x86_64-linux-thread-multi/Moose.pm line 15.
+Compilation failed in require at /data/apps/software/perl/perls/perl-5.16.3/bin/mcerunner.pl line 18.
+BEGIN failed--compilation aborted at /data/apps/software/perl/perls/perl-5.16.3/bin/mcerunner.pl line 18.

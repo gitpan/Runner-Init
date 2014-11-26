@@ -1,0 +1,21 @@
+2014/11/25 15:37:31: DEBUG Starting job 1 with PID 49650
+ 2014/11/25 15:37:31: DEBUG Cmd is perl testioselect.pl 5
+ 2014/11/25 15:37:37: ERROR StdErr:WosflkREuX
+ 2014/11/25 15:37:38: ERROR StdErr:MPEb8eg7c9
+ 2014/11/25 15:37:41: ERROR StdErr:iUT8BoaMRb
+ 2014/11/25 15:37:42: ERROR StdErr:rjTD0RL0Gm
+ 2014/11/25 15:37:46: INFO #####################################
+
+ARG is 5
+#####################################
+StdOut:OQmJPwMQCy
+StdOut:D9aaEp9iCz
+StdOut:Zvqb8nqAkj
+StdOut:slIlBn0BBj
+StdOut:hpNWEO7OF9
+StdOut:PTCVSGZtID
+
+#####################################
+ 2014/11/25 15:37:46: DEBUG Finishing job 1 with PID 49650 and ExitCode 0
+ 2014/11/25 15:37:46: INFO Total execution time 0 years, 00 months, 0 days, 00 hours, 00 minutes, 15 seconds
+ 

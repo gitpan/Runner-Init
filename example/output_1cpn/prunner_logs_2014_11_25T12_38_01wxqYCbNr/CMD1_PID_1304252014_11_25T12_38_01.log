@@ -1,0 +1,21 @@
+2014/11/25 15:38:01: DEBUG Starting job 1 with PID 130428
+ 2014/11/25 15:38:01: DEBUG Cmd is perl testioselect.pl 3
+ 2014/11/25 15:38:06: ERROR StdErr:PRnQkmfM8e
+ 2014/11/25 15:38:07: ERROR StdErr:blFQL5rSaz
+ 2014/11/25 15:38:08: ERROR StdErr:txamV3rmrr
+ 2014/11/25 15:38:10: ERROR StdErr:6QdZi58Cww
+ 2014/11/25 15:38:11: ERROR StdErr:VO4l7kJNco
+ 2014/11/25 15:38:15: ERROR StdErr:xkMLbcqW1v
+ 2014/11/25 15:38:16: INFO #####################################
+
+ARG is 3
+#####################################
+StdOut:MKMMVrJG8t
+StdOut:Lt7iw7hAdy
+StdOut:Jc1Isjd4GO
+StdOut:noUVQxTqUs
+
+#####################################
+ 2014/11/25 15:38:16: DEBUG Finishing job 1 with PID 130428 and ExitCode 0
+ 2014/11/25 15:38:16: INFO Total execution time 0 years, 00 months, 0 days, 00 hours, 00 minutes, 15 seconds
+ 

@@ -1,0 +1,16 @@
+2014/11/25 15:12:30: INFO hello world
+ 2014/11/25 15:12:30: INFO Submitted batch job 39905
+ 2014/11/25 15:12:30: INFO Submitted batch job 39906
+ 2014/11/25 15:12:30: INFO Submitted batch job 39907
+ 2014/11/25 15:12:30: INFO Submitted batch job 39908
+ 2014/11/25 15:12:30: INFO Submitted batch job 39909
+ 2014/11/25 15:12:30: DEBUG All the jobs $VAR1 = [
+          [
+            '39905',
+            '39906',
+            '39907',
+            '39908',
+            '39909'
+          ]
+        ];
+ 

@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+1.7       2014-11-26 10:22:19+03:00 Asia/Qatar
+    Migrating to Dist::Zilla
+
 1.6  2014-11-25 15:08:21 AST
     Added in a few small changes
 

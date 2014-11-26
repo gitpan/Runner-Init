@@ -1,0 +1,21 @@
+2014/11/25 15:38:01: DEBUG Starting job 1 with PID 49749
+ 2014/11/25 15:38:01: DEBUG Cmd is perl testioselect.pl 6
+ 2014/11/25 15:38:06: ERROR StdErr:hxHJ3n4O1O
+ 2014/11/25 15:38:07: ERROR StdErr:Um8t6RfyPQ
+ 2014/11/25 15:38:10: ERROR StdErr:dDIG70UEvE
+ 2014/11/25 15:38:11: ERROR StdErr:2j1mDDPUxA
+ 2014/11/25 15:38:12: ERROR StdErr:fzSNGeuU6o
+ 2014/11/25 15:38:13: ERROR StdErr:zfyqRuqS7R
+ 2014/11/25 15:38:14: ERROR StdErr:Vr3Ndil5UF
+ 2014/11/25 15:38:16: INFO #####################################
+
+ARG is 6
+#####################################
+StdOut:ZTys9APeZz
+StdOut:Lg02kBhIdV
+StdOut:c5OfcRnEyA
+
+#####################################
+ 2014/11/25 15:38:16: DEBUG Finishing job 1 with PID 49749 and ExitCode 0
+ 2014/11/25 15:38:16: INFO Total execution time 0 years, 00 months, 0 days, 00 hours, 00 minutes, 15 seconds
+ 

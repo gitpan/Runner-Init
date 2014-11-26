@@ -1,51 +1,15 @@
 ---
 abstract: 'object mce'
 author:
-  - 'Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>'
-build_requires:
-  Module::Build: '0.28'
-  Test::More: '0'
-  Test::Pod: '0'
+  - 'Jillian Rowe <jillian.e.rowe@gmail.com>'
+build_requires: {}
 configure_requires:
-  Module::Build: '0.28'
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.025, Dist::Milla version v1.0.5, CPAN::Meta::Converter version 2.143240'
+generated_by: 'Dist::Zilla version 5.025, CPAN::Meta::Converter version 2.143240'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
 name: Runner-Init
-no_index:
-  directory:
-    - t
-    - xt
-    - inc
-    - share
-    - eg
-    - examples
-requires:
-  Carp: '0'
-  Cwd: '0'
-  Data::Dumper: '0'
-  DateTime: '0'
-  DateTime::Format::Duration: '0'
-  File::Path: '0'
-  File::Temp: '0'
-  IO::File: '0'
-  IO::Select: '0'
-  IPC::Open3: '0'
-  Log::Log4perl: '0'
-  Moose: '0'
-  Moose::Util::TypeConstraints: '0'
-  MooseX::Getopt: '0'
-  MooseX::SimpleConfig: '0'
-  Symbol: '0'
-  Template: '0'
-  perl: '5.006'
-resources:
-  bugtracker: https://github.com/jerowe/Runner-Init/issues
-  homepage: https://github.com/jerowe/Runner-Init
-  repository: https://github.com/jerowe/Runner-Init.git
-version: '1.6'
-x_contributors:
-  - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'
+version: '1.7'

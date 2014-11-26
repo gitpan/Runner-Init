@@ -1,0 +1,32 @@
+2014/11/25 15:10:56: INFO hello world
+ 2014/11/25 15:10:57: INFO Submitted batch job 39885
+ 2014/11/25 15:10:57: INFO Submitted batch job 39886
+ 2014/11/25 15:10:57: INFO Submitted batch job 39887
+ 2014/11/25 15:10:57: INFO Submitted batch job 39888
+ 2014/11/25 15:10:57: INFO Submitted batch job 39889
+ 2014/11/25 15:10:57: INFO Submitted batch job 39890
+ 2014/11/25 15:10:57: INFO Submitted batch job 39891
+ 2014/11/25 15:10:57: INFO Submitted batch job 39892
+ 2014/11/25 15:10:57: INFO Submitted batch job 39893
+ 2014/11/25 15:10:57: INFO Submitted batch job 39894
+ 2014/11/25 15:10:57: INFO Submitted batch job 39895
+ 2014/11/25 15:10:57: INFO Submitted batch job 39896
+ 2014/11/25 15:10:57: INFO Submitted batch job 39897
+ 2014/11/25 15:10:57: DEBUG All the jobs $VAR1 = [
+          [
+            '39885',
+            '39886',
+            '39887',
+            '39888',
+            '39889',
+            '39890',
+            '39891',
+            '39892',
+            '39893',
+            '39894',
+            '39895',
+            '39896',
+            '39897'
+          ]
+        ];
+ 

@@ -515,10 +515,10 @@ sub run {
 #    system("module load slurm");
 #    system("module load shared");
     
-    print "In run devel\n";
+#    print "In run devel\n";
     $self->logname('slurm_logs');
     $self->log($self->init_log);
-    $self->log->info("hello world");
+#    $self->log->info("hello world");
 
     $self->check_files;
     $self->parse_file_slurm;

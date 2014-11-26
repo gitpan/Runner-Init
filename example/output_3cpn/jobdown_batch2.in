@@ -1,0 +1,6 @@
+perl testioselect.pl 4
+
+perl testioselect.pl 5
+
+perl testioselect.pl 6
+
