@@ -24,7 +24,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.6';
+our $VERSION = '1.8';
 
 =head1 SYNOPSIS
 
@@ -102,10 +102,11 @@ sub go {
 
 Parse the file of commands and send each command off to the queue.
 
-=cut
-
 #TODO
 #Merge mce/threads subroutines
+
+=cut
+
 
 sub parse_file_threads{
     my $self = shift;

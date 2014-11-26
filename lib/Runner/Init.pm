@@ -29,7 +29,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.6';
+our $VERSION = '1.8';
 
 =head1 SYNOPSIS
 
@@ -57,6 +57,9 @@ has 'infile' => (
     trigger => \&_set_infile,
 );
 
+=head2 _set_infile
+=cut
+
 sub _set_infile{
     my($self, $infile) = @_;
 
@@ -78,6 +81,9 @@ has 'outdir' => (
     documentation => q{Directory to write out files.},
     trigger => \&_set_outdir,
 );
+
+=head2 _set_outdir
+=cut
 
 sub _set_outdir{
     my($self, $outdir) = @_;
@@ -182,6 +188,7 @@ has 'logname' => (
 
 =head1 Subroutines
 
+=head2 set_logdir
 =cut
 
 sub set_logdir{
@@ -205,6 +212,9 @@ sub set_logdir{
     return $logdir;
 }
 
+=head2 set_logfile
+=cut
+
 sub set_logfile{
     my $self = shift;
 
@@ -212,6 +222,9 @@ sub set_logfile{
     $dt =~ s/[^\w]/_/g;
     return "$dt.log";
 }
+
+=head2 init_log
+=cut
 
 sub init_log{
     my $self = shift;
@@ -230,7 +243,7 @@ sub init_log{
     return $log;
 }
 
-=head2 run_commands_threads
+=head2 run_command_threads
 
 Start the thread, run the command, and finish the thread
 
@@ -248,7 +261,7 @@ sub run_command_threads{
     return;
 }
 
-=head2 run_commands_mce
+=head2 run_command_mce
 
 MCE knows which subcommand to use from Runner/MCE - object mce
 

@@ -1,0 +1,10 @@
+name = Runner-Init
+installer = ModuleBuild
+author  = Jillian Rowe <jillian.e.rowe@gmail.com>
+license = Perl_5
+copyright_holder = Jillian Rowe
+copyright_year   = 2014
+version = 1.7
+
+[@Basic]
+[NextRelease]

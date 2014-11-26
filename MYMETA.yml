@@ -1,28 +1,23 @@
 ---
-abstract: 'object mce'
+abstract: unknown
 author:
-  - 'Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>'
+  - 'Jillian Rowe <jillian.e.rowe@gmail.com>'
 build_requires:
-  Module::Build: '0.28'
   Test::More: '0'
   Test::Pod: '0'
 configure_requires:
-  Module::Build: '0.28'
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.025, Dist::Milla version v1.0.5, CPAN::Meta::Converter version 2.143240'
-license: perl
+generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520'
+license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: '1.4'
+  version: '1.8'
 name: Runner-Init
 no_index:
   directory:
     - t
-    - xt
     - inc
-    - share
-    - eg
-    - examples
 requires:
   Carp: '0'
   Cwd: '0'
@@ -42,6 +37,4 @@ requires:
   Symbol: '0'
   Template: '0'
   perl: '5.006'
-version: '1.8'
-x_contributors:
-  - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'
+version: '1.0'

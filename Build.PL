@@ -20,7 +20,7 @@ my %module_build_args = (
     "Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>"
   ],
   "dist_name" => "Runner-Init",
-  "dist_version" => "1.6",
+  "dist_version" => "1.8",
   "license" => "perl",
   "module_name" => "Runner::Init",
   "recommends" => {},

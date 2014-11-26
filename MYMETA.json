@@ -1,12 +1,12 @@
 {
-   "abstract" : "object mce",
+   "abstract" : "HPC Job Runner",
    "author" : [
-      "Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>"
+      "Jillian Rowe <jillian.e.rowe@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.025, Dist::Milla version v1.0.5, CPAN::Meta::Converter version 2.143240",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520",
    "license" : [
-      "perl_5"
+      "unknown"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -16,29 +16,19 @@
    "no_index" : {
       "directory" : [
          "t",
-         "xt",
-         "inc",
-         "share",
-         "eg",
-         "examples"
+         "inc"
       ]
    },
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Module::Build" : "0.28",
             "Test::More" : "0",
             "Test::Pod" : "0"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.28"
-         }
-      },
-      "develop" : {
-         "requires" : {
-            "Test::Pod" : "1.41"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "runtime" : {
@@ -65,9 +55,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "1.8",
-   "x_contributors" : [
-      "Jillian Rowe <jir2004@qatar-med.cornell.edu>"
-   ]
+   "version" : "1.0"
 }
-
