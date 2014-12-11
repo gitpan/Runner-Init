@@ -15,12 +15,12 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.28"
   },
-  "dist_abstract" => "object mce",
+  "dist_abstract" => "HPC Job Runner ",
   "dist_author" => [
     "Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>"
   ],
   "dist_name" => "Runner-Init",
-  "dist_version" => "1.8",
+  "dist_version" => "1.9",
   "license" => "perl",
   "module_name" => "Runner::Init",
   "recommends" => {},

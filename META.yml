@@ -1,5 +1,5 @@
 ---
-abstract: 'object mce'
+abstract: 'HPC Job Runner '
 author:
   - 'Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>'
 build_requires:
@@ -42,6 +42,10 @@ requires:
   Symbol: '0'
   Template: '0'
   perl: '5.006'
-version: '1.8'
+resources:
+  bugtracker: https://bitbucket.org/jir2004/runner-init/issues
+  homepage: https://bitbucket.org/jir2004/runner-init
+  repository: git://git@bitbucket.org:jir2004/runner-init.git
+version: '1.9'
 x_contributors:
   - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'

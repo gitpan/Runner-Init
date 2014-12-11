@@ -1,5 +1,0 @@
----
-infile: "example/testcommand.in"
-outdir: "example/test"
-module:
-    - "shared"

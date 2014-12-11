@@ -9,14 +9,9 @@ MYMETA.json
 MYMETA.yml
 Makefile
 README
-bin/mcerunner.pl
-bin/parallelrunner.pl
-bin/slurmrunner.pl
 cpanfile
 dist.ini
 dist.ini.zilla
-example/test_chunker.yml
-example/test_threads.in
 example/testcommand.in
 example/testioselect.pl
 ignore.txt

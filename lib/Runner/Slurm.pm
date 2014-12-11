@@ -19,7 +19,7 @@ extends 'Runner::Init';
 
 =head1 NAME
 
-Runner::Slurm - The great new Runner::Slurm!
+Runner::Slurm - Job Submission to Slurm
 
 =head1 VERSION
 
@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.8';
+our $VERSION = '1.9';
 
 
 =head1 SYNOPSIS

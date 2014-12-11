@@ -1,5 +1,5 @@
 {
-   "abstract" : "object mce",
+   "abstract" : "HPC Job Runner ",
    "author" : [
       "Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>"
    ],
@@ -65,7 +65,18 @@
       }
    },
    "release_status" : "stable",
-   "version" : "1.8",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://bitbucket.org/jir2004/runner-init/issues"
+      },
+      "homepage" : "https://bitbucket.org/jir2004/runner-init",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://git@bitbucket.org:jir2004/runner-init.git",
+         "web" : "https://bitbucket.org/jir2004/runner-init"
+      }
+   },
+   "version" : "1.9",
    "x_contributors" : [
       "Jillian Rowe <jir2004@qatar-med.cornell.edu>"
    ]

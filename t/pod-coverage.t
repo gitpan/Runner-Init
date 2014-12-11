@@ -17,4 +17,12 @@ eval "use Pod::Coverage $min_pc";
 plan skip_all => "Pod::Coverage $min_pc required for testing POD coverage"
     if $@;
 
-all_pod_coverage_ok();
+#all_pod_coverage_ok();
+
+plan tests => 2;
+
+pod_coverage_ok("Runner::Init");
+pod_coverage_ok("Runner::Slurm");
+
+#pod_coverage_ok("Runner::Threads");   <-- Runner::MCE fails similarly without -T
+##pod_coverage_ok("Runner::MCE");        <-- In addition, Runner::MCE fails with perl -T

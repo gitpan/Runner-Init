@@ -21,7 +21,7 @@ with 'MooseX::Getopt';
 
 =head1 NAME
 
-Runner::Init 
+Runner::Init - HPC Job Runner 
 
 =head1 VERSION
 
@@ -29,10 +29,9 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.8';
+our $VERSION = '1.9';
 
 =head1 SYNOPSIS
-
 
 This is a base class for Runner::MCE and Runner:Threads. You should not need to call this module directly.
 

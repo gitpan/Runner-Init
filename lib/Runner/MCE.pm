@@ -12,7 +12,7 @@ extends 'Runner::Init';
 
 =head1 NAME
 
-Runner::MCE
+Runner::MCE - Job submission using MCE
 
 =head1 VERSION
 

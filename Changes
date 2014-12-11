@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+1.9  2014-12-11 13:48:30 AST
+    Took Carp::Always out of script files
+
 1.8  2014-11-26 14:51:26 AST
     Migrating back to Dist::Milla
 

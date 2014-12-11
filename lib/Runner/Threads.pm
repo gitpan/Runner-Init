@@ -16,7 +16,7 @@ extends 'Runner::Init';
 
 =head1 NAME
 
-Runner::Threads
+Runner::Threads - Job submission using threads
 
 =head1 VERSION
 
@@ -24,7 +24,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '1.8';
+our $VERSION = '1.9';
 
 =head1 SYNOPSIS
 
