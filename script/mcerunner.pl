@@ -10,14 +10,11 @@
 
 package Main;
 
-use strict;
-use warnings;
-
-use File::FindLib 'lib';
+#use File::FindLib 'lib';
 
 use Moose;
 #use Carp::Always;
-use Data::Dumper;
+#use Data::Dumper;
 
 #use Runner::MCE;
 extends 'Runner::MCE';

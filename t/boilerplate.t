@@ -4,7 +4,8 @@ use strict;
 use warnings FATAL => 'all';
 use Test::More;
 
-plan tests => 6;
+#plan tests => 6;
+plan skip_all => 'milla generated';
 
 sub not_in_file_ok {
     my ($filename, %regex) = @_;

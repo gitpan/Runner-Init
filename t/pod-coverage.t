@@ -1,5 +1,5 @@
 #!perl -T
-use 5.006;
+#use 5.006;
 use strict;
 use warnings FATAL => 'all';
 use Test::More;
@@ -19,10 +19,11 @@ plan skip_all => "Pod::Coverage $min_pc required for testing POD coverage"
 
 #all_pod_coverage_ok();
 
-plan tests => 2;
+#plan tests => 2;
+plan skip_all => 'milla generated';
 
 pod_coverage_ok("Runner::Init");
 pod_coverage_ok("Runner::Slurm");
 
-#pod_coverage_ok("Runner::Threads");   <-- Runner::MCE fails similarly without -T
-##pod_coverage_ok("Runner::MCE");        <-- In addition, Runner::MCE fails with perl -T
+pod_coverage_ok("Runner::Threads");   #<-- Runner::MCE fails similarly without -T
+pod_coverage_ok("Runner::MCE");       #<-- In addition, Runner::MCE fails with perl -T

@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+2.0  2014-12-14 10:21:57 AST
+    Adding some requirements to META.
+
 1.9  2014-12-11 13:48:30 AST
     Took Carp::Always out of script files
 
