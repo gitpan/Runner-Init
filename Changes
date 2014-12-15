@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+2.21  2014-12-15 10:15:53 AST
+    Added a few changes for file paths
+
 2.1  2014-12-15 08:50:05 AST
     Made a few changes to the logging structure
 

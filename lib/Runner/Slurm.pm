@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.1';
+our $VERSION = '2.21';
 
 
 =head1 SYNOPSIS
@@ -762,10 +762,12 @@ sub process_batch{
 #    $self->cmdfile($self->jobname."_batch".$self->batch_counter.".in");
 
     if($self->use_threads){
-        $command = "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir." --logname ".$self->jobname."_".$self->batch_counter;
+        $command = "cd ".getcwd()."\n"; #Go back to the working directory just to be safe
+        $command .= "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir." --logname ".$self->jobname."_".$self->batch_counter;
     }
     elsif($self->use_processes){
-        $command = "mcerunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir." --logname ".$self->jobname."_".$self->batch_counter;
+        $command = "cd ".getcwd()."\n";
+        $command .= "mcerunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir." --logname ".$self->jobname."_".$self->batch_counter;
     }
 
     $self->template->process($self->template_file, 
