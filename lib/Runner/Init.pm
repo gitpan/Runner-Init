@@ -29,7 +29,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.0';
+our $VERSION = '2.1';
 
 =head1 SYNOPSIS
 
@@ -180,7 +180,7 @@ has 'logfile' => (
 );
 
 has 'logname' => (
-    is => 'Str',
+    isa => 'Str',
     is => 'rw',
     default => 'prunner_logs',
 );
@@ -195,15 +195,16 @@ sub set_logdir{
 
     my $logdir;
     $logdir = $self->outdir."/".$self->logname."_".$self->set_logfile;
-    $logdir =~ s/\.log$//;
-    my @chars = ("A".."Z", "a".."z");
-    my $string;
-    $string .= $chars[rand @chars] for 1..8;
-    $logdir .= $string;
+#    #forget this it makes the log files too log
+#    $logdir =~ s/\.log$//;
+#    my @chars = ("A".."Z", "a".."z");
+#    my $string;
+#    $string .= $chars[rand @chars] for 1..8;
+#    $logdir .= $string;
 
     #Don't want to overwrite existing logdirs
     while(-d $logdir){
-        sleep(2);
+        sleep(1);
         $logdir = getcwd()."/".$self->logname."_".$self->set_logfile;
         $logdir =~ s/\.log$//;
     }
@@ -303,7 +304,7 @@ sub _log_commands {
 
     #Create new log for each job
     $self->logfile($self->set_logfile);
-    $self->prepend_logfile("CMD".$self->counter."_PID_$pid");
+    $self->prepend_logfile("CMD".$self->counter."_PID_$pid"."_DT_");
     my $logger = $self->init_log;
 
     #Start running job

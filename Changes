@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+2.1  2014-12-15 08:50:05 AST
+    Made a few changes to the logging structure
+
 2.0  2014-12-14 10:21:57 AST
     Adding some requirements to META.
 

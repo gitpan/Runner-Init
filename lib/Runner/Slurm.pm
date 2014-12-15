@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.0';
+our $VERSION = '2.1';
 
 
 =head1 SYNOPSIS
@@ -686,12 +686,12 @@ sub parse_file_slurm{
                 $self->wait(1);
                 #Keep this for debug info for now
 #                shift @{$self->jobref} if scalar @{$self->jobref} > 2;
-                $self->work;
+                $self->work if $self->has_batch;
                 push(@{$self->jobref}, []);
             }
             elsif( $self->match_cmd("newnode") ){
                 $self->clear_cmd;
-                $self->work;
+                $self->work if $self->has_batch;
             }
             else{
                 #Don't want to increase command count for wait and newnode
@@ -744,8 +744,8 @@ sub process_batch{
     my $self = shift;
     my($cmdfile, $slurmfile, $slurmsubmit, $fh, $command);
     
-    $self->cmdfile($self->outdir."/".$self->jobname."_batch".$self->batch_counter.".in");
-    $self->slurmfile($self->outdir."/".$self->jobname."_batch".$self->batch_counter.".sh"); 
+    $self->cmdfile($self->outdir."/".$self->jobname."_".$self->batch_counter.".in");
+    $self->slurmfile($self->outdir."/".$self->jobname."_".$self->batch_counter.".sh"); 
 
     $fh = IO::File->new( $self->cmdfile, q{>} ) or print "Error opening file  ".$self->cmdfile."  ".$!; 
 
@@ -762,10 +762,10 @@ sub process_batch{
 #    $self->cmdfile($self->jobname."_batch".$self->batch_counter.".in");
 
     if($self->use_threads){
-        $command = "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir;
+        $command = "paralellrunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir." --logname ".$self->jobname."_".$self->batch_counter;
     }
     elsif($self->use_processes){
-        $command = "mcerunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir;
+        $command = "mcerunner.pl --procs ".$self->procs_per_sbatch." --infile ".$self->cmdfile." --outdir ".$self->outdir." --logname ".$self->jobname."_".$self->batch_counter;
     }
 
     $self->template->process($self->template_file, 

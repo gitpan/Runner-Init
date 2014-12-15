@@ -12,7 +12,7 @@
 
 package Main;
 
-#use File::FindLib 'lib';
+#use File::FindLib '../lib';
 
 use Moose;
 #use Carp::Always;
