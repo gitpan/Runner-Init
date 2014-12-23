@@ -14,6 +14,7 @@ dist.ini
 dist.ini.zilla
 example/testcommand.in
 example/testioselect.pl
+example/testlogging.pl
 ignore.txt
 lib/Runner/Example.pod
 lib/Runner/Init.pm
@@ -23,6 +24,7 @@ lib/Runner/Threads.pm
 script/mcerunner.pl
 script/parallelrunner.pl
 script/slurmrunner.pl
+script/slurmrunnerbasic.pl
 t/00-load.t
 t/boilerplate.t
 t/manifest.t

@@ -14,8 +14,8 @@ use Data::Dumper;
 #use IPC::Cmd qw/can_run/;
 
 use Moose;
-with 'MooseX::SimpleConfig';
 extends 'Runner::Init';
+with 'MooseX::SimpleConfig';
 
 =head1 NAME
 
@@ -27,8 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.22';
-
+our $VERSION = '2.23';
 
 =head1 SYNOPSIS
 
@@ -78,6 +77,7 @@ This is optional. Paramaters can be passed straight to the command line
 has '+configfile' => (
     required => 0,
 );
+
 
 =head2 infile
 
@@ -191,14 +191,16 @@ has 'nodelist' => (
 =head2 submit_slurm 
 
 Bool value whether or not to submit to slurm. If you are looking to debug your files, or this script you will want to set this to zero.
+Don't submit to slurm with --nosubmit_to_slurm from the command line or 
+$self->submit_to_slurm(0); within your code
 
 =cut
 
 has 'submit_to_slurm' => (
     is => 'rw',
     isa => 'Bool',
-    default => 1, 
-    required => 0,
+    default => 1,
+    required => 1,
     documentation => q{Bool value whether or not to submit to slurm. If you are looking to debug your files, or this script you will want to set this to zero.},
 );
 
@@ -524,6 +526,7 @@ sub run {
     $self->parse_file_slurm;
 }
 
+
 =head2 check_files()
 
 Check to make sure the outdir exists. 
@@ -556,8 +559,9 @@ If the nodelist is supplied partition must be supplied
 sub get_nodes{
     my($self) = @_;
 
-    if(!$self->nodelist && $self->partition){
-        print "If you define a partition you must define a nodelist!\n";
+#    #Fix - had this backwards
+    if($self->nodelist && !$self->partition){
+        print "If you define a nodelist you must define a partition!\n";
         die;
     }
     
@@ -655,6 +659,11 @@ sub parse_file_slurm{
         next unless $line =~ m/\S/;
         next if $line =~ m/^#/;
 
+        #Do a sanity check for nohup
+        if($line =~ m/^nohup/){
+            die print "You cannot submit jobs to the queue using nohup! Please remove nohup and try again.\n";
+        }
+
         if( 0 == $self->cmd_counter % ($self->commands_per_node + 1) && $self->batch ){
             #Run this batch and start the next
             $self->work;
@@ -704,7 +713,7 @@ sub parse_file_slurm{
 #    print "Working!\n".Dumper($self->batch);
     $self->work if $self->has_batch;
 
-    $self->log->debug("All the jobs ".Dumper($self->jobref));
+#    $self->log->debug("All the jobs ".Dumper($self->jobref));
 }
 
 =head2 work
@@ -815,7 +824,6 @@ sub submit_slurm{
     my $cmdpid;
     eval{
         $cmdpid = open3($infh, $outfh, $errfh, "sbatch ".$self->slurmfile);
-        print "Submitting job ".$self->slurmfile."\n";
     };
     die $@ if $@;
 
@@ -862,6 +870,7 @@ sub submit_slurm{
     }
     else{
         push(@{$self->jobref->[-1]}, $jobid);
+        print "Submitting job ".$self->slurmfile."\n\tWith Slurm jobid $jobid\n";
     }
 }
 
@@ -955,4 +964,6 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
+__PACKAGE__->meta->make_immutable;
+#use namespace::autoclean;
 1; # End of Runner::Slurm

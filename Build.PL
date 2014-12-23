@@ -15,12 +15,12 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.28"
   },
-  "dist_abstract" => "HPC Job Runner ",
+  "dist_abstract" => "HPC Runner::Slurm, Runner::MCE and Runner::Threads base class ",
   "dist_author" => [
     "Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>"
   ],
   "dist_name" => "Runner-Init",
-  "dist_version" => "2.22",
+  "dist_version" => "2.23",
   "license" => "perl",
   "module_name" => "Runner::Init",
   "recommends" => {},
@@ -48,7 +48,8 @@ my %module_build_args = (
   "script_files" => [
     "script/mcerunner.pl",
     "script/parallelrunner.pl",
-    "script/slurmrunner.pl"
+    "script/slurmrunner.pl",
+    "script/slurmrunnerbasic.pl"
   ],
   "test_requires" => {}
 );

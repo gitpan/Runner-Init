@@ -18,6 +18,8 @@ use namespace::autoclean;
 extends 'Runner::Slurm';
 
 use Log::Log4perl;
+use File::FindLib 'lib';
+
 
 sub init_log {
     my $self = shift;

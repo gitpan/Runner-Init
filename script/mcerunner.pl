@@ -10,15 +10,9 @@
 
 package Main;
 
-#use File::FindLib 'lib';
-
 use Moose;
-#use Carp::Always;
-#use Data::Dumper;
-
-#use Runner::MCE;
 extends 'Runner::MCE';
 
-Runner::MCE->new_with_options()->go;
+Main->new_with_options()->go;
 
 1;

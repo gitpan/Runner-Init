@@ -1,5 +1,5 @@
 ---
-abstract: 'HPC Job Runner '
+abstract: 'HPC Runner::Slurm, Runner::MCE and Runner::Threads base class '
 author:
   - 'Jillian Rowe, C<< <jillian.e.rowe at gmail.com> >>'
 build_requires:
@@ -46,6 +46,6 @@ resources:
   bugtracker: https://bitbucket.org/jir2004/runner-init/issues
   homepage: https://bitbucket.org/jir2004/runner-init
   repository: git://git@bitbucket.org:jir2004/runner-init.git
-version: '2.22'
+version: '2.23'
 x_contributors:
   - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'

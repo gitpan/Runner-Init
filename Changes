@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+2.23  2014-12-23 15:25:10 AST
+    Logging to rsyslog is a default now of slurmrunner
+
 2.22  2014-12-15 15:11:09 AST
     More changes for logging
 

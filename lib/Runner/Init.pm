@@ -14,6 +14,7 @@ use Cwd;
 use File::Path qw(make_path);
 use File::Spec;
 
+#use Moose::Role;
 use Moose;
 use Moose::Util::TypeConstraints;
 with 'MooseX::Getopt';
@@ -21,7 +22,7 @@ with 'MooseX::Getopt';
 
 =head1 NAME
 
-Runner::Init - HPC Job Runner 
+Runner::Init - HPC Runner::Slurm, Runner::MCE and Runner::Threads base class 
 
 =head1 VERSION
 
@@ -29,7 +30,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.22';
+our $VERSION = '2.23';
 
 =head1 SYNOPSIS
 
@@ -226,8 +227,10 @@ sub set_logfile{
 =head2 init_log
 =cut
 
-sub init_log{
+sub init_log {
     my $self = shift;
+
+    print "In init_log ".__PACKAGE__."\n";
 
     Log::Log4perl->easy_init(
         {
@@ -370,7 +373,6 @@ sub _log_commands {
 
 
 #__PACKAGE__->meta->make_immutable;
-use namespace::autoclean;
 1; 
 
 =head1 AUTHOR
