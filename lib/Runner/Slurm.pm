@@ -27,7 +27,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.24';
+our $VERSION = '2.27';
 
 =head1 SYNOPSIS
 
@@ -659,6 +659,7 @@ sub parse_file_slurm{
         next unless $line =~ m/\S/;
         next if $line =~ m/^#/;
 
+        $DB::single=2;
         #Do a sanity check for nohup
         if($line =~ m/^nohup/){
             die print "You cannot submit jobs to the queue using nohup! Please remove nohup and try again.\n";
@@ -666,6 +667,7 @@ sub parse_file_slurm{
 
         if( 0 == $self->cmd_counter % ($self->commands_per_node + 1) && $self->batch ){
             #Run this batch and start the next
+            $DB::single=2;
             $self->work;
         }
 
@@ -689,7 +691,7 @@ sub parse_file_slurm{
                 $self->add_batch($line);
                 next;
             }
-            elsif( $self->match_cmd("wait") ){
+            elsif( $self->match_cmd(qr/^wait$/) ){
                 #submit this batch and get the job id so the next can depend upon it
                 $self->clear_cmd;
                 $self->wait(1);
@@ -698,7 +700,7 @@ sub parse_file_slurm{
                 $self->work if $self->has_batch;
                 push(@{$self->jobref}, []);
             }
-            elsif( $self->match_cmd("newnode") ){
+            elsif( $self->match_cmd(qr/^newnode$/) ){
                 $self->clear_cmd;
                 $self->work if $self->has_batch;
             }
@@ -707,6 +709,7 @@ sub parse_file_slurm{
                 $self->inc_cmd_counter; 
             }
             $self->add_batch($line."\n") if $self->has_cmd;
+            $DB::single=2;
             $self->clear_cmd;
         }
     }
@@ -728,6 +731,8 @@ Take care of the counters
 sub work{
     my $self = shift;
 
+
+    $DB::single=2;
 
     if($self->node_counter > (scalar @{ $self->nodelist }) ){
         $self->reset_node_counter;

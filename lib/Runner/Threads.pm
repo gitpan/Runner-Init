@@ -24,7 +24,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.24';
+our $VERSION = '2.27';
 
 =head1 SYNOPSIS
 
@@ -137,7 +137,7 @@ sub parse_file_threads{
             if($line =~ m/\\$/){
                 next;
             }
-            elsif( $self->match_cmd("wait") ){
+            elsif( $self->match_cmd(qr/^wait$/) ){
                 $self->log->info("Beginning command:\n".$self->cmd);
                 $self->log->info("Waiting for all children to exit...");
                 $self->clear_cmd;

@@ -20,7 +20,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.24';
+our $VERSION = '2.27';
 
 =head1 SYNOPSIS
 
@@ -93,6 +93,7 @@ sub go{
     #MCE specific
     $self->parse_file_mce;
 
+    $DB::single=2;
 # MCE workers dequeue 2 elements at a time. Thus the reason for * 2.
     $self->queue->enqueue((undef) x ($self->procs * 2));
 # MCE will automatically shutdown after running for 1 or no args.
@@ -139,7 +140,9 @@ sub parse_file_mce{
         next unless $line =~ m/\S/;
         next if $line =~ m/^#/;
 
+
         if($self->has_cmd){
+            $DB::single=2;
             $self->add_cmd($line);
             if($line =~ m/\\$/){
                 next;
@@ -155,11 +158,13 @@ sub parse_file_mce{
             }
         }
         else{
+            $DB::single=2;
             $self->cmd($line);
             if($line =~ m/\\$/){
                 next;
             }
-            elsif( $self->match_cmd("wait") ){
+            elsif( $self->match_cmd(qr/^wait$/) ){
+                $DB::single=2;
                 $self->log->info("Beginning command:\n".$self->cmd);
                 $self->log->info("Waiting for all children to complete...");
                 $self->clear_cmd;
@@ -174,6 +179,7 @@ sub parse_file_mce{
             }
             else{
                 $self->log->info("Enqueuing command:\n".$self->cmd);
+                $DB::single=2;
                 #MCE
                 $self->queue->enqueue($self->counter, $self->cmd);
 #                #Threads

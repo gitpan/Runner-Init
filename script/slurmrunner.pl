@@ -14,7 +14,7 @@
 package Main;
 
 use Moose;
-#use File::FindLib 'lib';
+#use File::FindLib '../lib';
 #use namespace::autoclean;
 extends 'Runner::Slurm';
 

@@ -1,5 +1,14 @@
 Revision history for Runner-Init
 
+2.27  2014-12-29 14:43:28 AST
+    - Changed the match 'wait' to match wait qr/^wait$/ instead. It was failing on any commands with the word 'wait' before. 
+
+2.26  2014-12-29 14:35:43 AST
+    More debugging
+
+2.25
+    Debugging command with arguements in _log_command
+
 2.24  2014-12-29 09:35:14 AST
     If no outdir is specified the new default is $ENV{HOME}/hpcjobs instead of CWD
 

@@ -30,7 +30,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.24';
+our $VERSION = '2.27';
 
 =head1 SYNOPSIS
 
@@ -273,6 +273,8 @@ sub run_command_mce{
     my $self = shift;
 
     my $pid = $$;
+
+    $DB::single=2;
     
     #Mce doesn't take exitcode to end
     $self->_log_commands($pid);
@@ -303,6 +305,7 @@ sub _log_commands {
     my $dt1 = DateTime->now();
 
     #Create logdir
+    $DB::single=2;
 
     #Create new log for each job
     $self->logfile($self->set_logfile);
@@ -319,10 +322,17 @@ sub _log_commands {
     eval{
         $cmdpid = open3($infh, $outfh, $errfh, $self->cmd);
     };
-    die $@ if $@;
+    #die $@ if $@;
+    $infh->autoflush();
+
+    $DB::single=2;
 
     $logger->debug("Starting job ".$self->counter." with PID $cmdpid");
     $logger->debug("Cmd is ".$self->cmd);
+
+    $logger->debug("@ is ".$@) if $@;
+
+    $DB::single=2;
 
 # now our child is running, happily printing to 
 # its stdout and stderr (our $outfh and $errfh).
@@ -358,6 +368,7 @@ sub _log_commands {
     waitpid($cmdpid, 1);
     my $exitcode = $?;
 
+    $DB::single=2;
     $logger->debug("Finishing job ".$self->counter." with PID $cmdpid and ExitCode $exitcode");
 
     my $dt2 = DateTime->now();
