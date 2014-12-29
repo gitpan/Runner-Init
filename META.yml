@@ -46,6 +46,6 @@ resources:
   bugtracker: https://bitbucket.org/jir2004/runner-init/issues
   homepage: https://bitbucket.org/jir2004/runner-init
   repository: git://git@bitbucket.org:jir2004/runner-init.git
-version: '2.23'
+version: '2.24'
 x_contributors:
   - 'Jillian Rowe <jir2004@qatar-med.cornell.edu>'

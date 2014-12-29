@@ -1,5 +1,8 @@
 Revision history for Runner-Init
 
+2.24  2014-12-29 09:35:14 AST
+    If no outdir is specified the new default is $ENV{HOME}/hpcjobs instead of CWD
+
 2.23  2014-12-23 15:25:10 AST
     Logging to rsyslog is a default now of slurmrunner
 

@@ -30,7 +30,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '2.23';
+our $VERSION = '2.24';
 
 =head1 SYNOPSIS
 
@@ -77,7 +77,8 @@ has 'outdir' => (
     is => 'rw',
     isa => 'Str',
     required => 1,
-    default => sub {return getcwd() },
+#    default => sub {return getcwd() },
+    default => sub { return "$ENV{HOME}/hpcjobs" },
     documentation => q{Directory to write out files.},
     trigger => \&_set_outdir,
 );
@@ -229,8 +230,6 @@ sub set_logfile{
 
 sub init_log {
     my $self = shift;
-
-    print "In init_log ".__PACKAGE__."\n";
 
     Log::Log4perl->easy_init(
         {
